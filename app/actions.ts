@@ -49,6 +49,8 @@ export const signInAction = async (formData: FormData) => {
     password,
   });
 
+
+
   if (error) {
     return encodedRedirect("error", "/sign-in", error.message);
   }
@@ -132,3 +134,5 @@ export const signOutAction = async () => {
   await supabase.auth.signOut();
   return redirect("/sign-in");
 };
+
+
